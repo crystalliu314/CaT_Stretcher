@@ -136,20 +136,20 @@ void drawContents() {
 
       //displaying text
       fill(255, 255, 255);
-      rect(25, 25, 970-224, 425-98);
+      rect(25, 25, 970-224, 425-120);
       fill(0, 0, 0);
       textFont(createFont("Arial Bold", 40, true));
       textAlign(CENTER);
       text("Please Set Initial Position", 500-100, 90-10);
       textAlign(LEFT);
-      textFont(createFont("Arial", 25, true));
+      textFont(createFont("Arial", 18, true));
       fill(#FF3B3B); //red
       text("1. Make sure EMERGENCY STOP button is released", 100-30, 170-35);
       fill(0, 0, 0);
-      text("2. Press the AUX button ", 100-30, 220-35);
-      text("3. Jog stretcher using the FORWARD and BACK jog buttons", 100-30, 270-35);
-      text("4. Press the TARE button to set initial position", 100-30, 320-35);
-      text("5. Press the READY button to ready stretcher for pattern input", 100-30, 370-35);
+      text("2. Press the AUX button ", 100-30, 210-35);
+      text("3. Jog stretcher using the FORWARD and BACK jog buttons", 100-30, 250-35);
+      text("4. Press the TARE button to set initial position", 100-30, 290-35);
+      text("5. Press the READY button to ready stretcher for pattern input", 100-30, 330-35);
 
       if (MMTKState==1) {
         aux.setColorBackground(#002b5c);
@@ -160,19 +160,19 @@ void drawContents() {
       if (displayAuxError==1) {
         fill(#FF3B3B); //red
         textSize(10);
-        text("ERROR: Please AUX button before JOGGING, TARE, or READY", 50, 460);
+        text("ERROR: Please AUX button before JOGGING, TARE, or READY", 50, 430);
       }
 
       if (displayTareError==1) {
         fill(#FF3B3B); //red
         textSize(10);
-        text("ERROR: Please AUX and TARE before READY", 350, 460);
+        text("ERROR: Please AUX and TARE before READY", 350, 430);
       }
 
       if (displayEstopError==1) {
         fill(#FF3B3B); //red
         textSize(10);
-        text("ERROR: Please release ESTOP before AUX", 580, 460);
+        text("ERROR: Please release ESTOP before AUX", 580, 430);
       }
 
       break;
@@ -220,7 +220,7 @@ void drawContents() {
 
       int y;
       textFont(createFont("Arial", 20, true));
-      text("Wave: ", 12, y=165);
+      text("Wave: ", 12, y=155);
       text("Length: ", 12, y+=35);
       text("Time A: ", 12, y+=35);
       text("Time B: ", 12, y+=35);
@@ -236,7 +236,7 @@ void drawContents() {
       int[] xPositions={150, 315, 480, 645};
 
       for (int i=0; i<4; i++) {   //cycles through user
-        y=130;
+        y=120;
         for (int j=0; j<9; j++) {   //cycles through all settings of one user
           //user1 info
           if (j==0) {
@@ -308,7 +308,7 @@ void drawContents() {
       }
       textSize(25);
       fill(0, 0, 0);
-      text("Machine run time: ", 15, 395-70);
+      text("Machine run time: ", 15, 395-100);
 
       stretchL = float(stretchLen.getText())*1000;
       timeA = float(TimeA.getText())*1000;
@@ -323,7 +323,7 @@ void drawContents() {
         fill(#FF3B3B); //red
         textSize(15);
         for (int i=0; i<errors.size(); i++) {
-          text(errors.get(i), 500, 370+(25*i));
+          text(errors.get(i), 375, 355+(25*i));
         }
       }
 
@@ -380,13 +380,13 @@ void drawContents() {
         //making rectangles that border timer and settings
         fill(255, 255, 255);
         rect(37, 300, 370, 140);//for settings (x, y, len, wid)
-        rect(417, 300, 340, 90);//for timer
+        rect(417, 300, 340, 80);//for timer
 
         fill(0, 0, 0);
 
         //displaying settings
         textAlign(LEFT);
-        int x=45, y=320;
+        int x=45, y=315;
         textSize(15);
         if (sinWave==1) {
           text("Wave: "+"Sinusoid", x, y);
@@ -618,7 +618,7 @@ void drawContents() {
       textAlign(CENTER);
       text("Emergency Stop Engaged", 400, 100);
       textAlign(LEFT);
-      textFont(createFont("Arial ", 25, true));
+      textFont(createFont("Arial ", 20, true));
 
       fill(#FF3B3B); //red
       text("1. Release THE EMERGENCY STOP button WHEN SAFE", 70, 170);

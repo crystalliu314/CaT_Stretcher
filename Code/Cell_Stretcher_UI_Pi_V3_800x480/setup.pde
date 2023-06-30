@@ -35,18 +35,18 @@ void setupContents() {
   //setup screen
   aux=cp5.addButton("Aux")
     .setFont(createFont("Arial Black", 20))
-    .setPosition(x=37, y=470-100)
-    .setSize(120, 75);
+    .setPosition(x=37, y=470-120)
+    .setSize(120, 55);
 
   jogBak=cp5.addButton("Jog Back")
     .setFont(createFont("Arial Black", 20))
     .setPosition(x+150, y)
-    .setSize(120, 75);
+    .setSize(120, 55);
 
   jogFwd=cp5.addButton("Jog Fwd")
     .setFont(createFont("Arial Black", 20))
     .setPosition(x+300, y)
-    .setSize(120, 75);
+    .setSize(120, 55);
 
   //holding jog buttons - callback functions
   jogBak.addCallback(new CallbackListener() {
@@ -114,12 +114,12 @@ void setupContents() {
   tareButton=cp5.addButton("Tare")
     .setFont(createFont("Arial Black", 20))
     .setPosition(x+450, y)
-    .setSize(120, 75);
+    .setSize(120, 55);
 
   startButton=cp5.addButton("Ready")
     .setFont(createFont("Arial Black", 20))
     .setPosition(x+600, y)
-    .setSize(120, 75);
+    .setSize(120, 55);
 
 
   //control panel/user inputs screen
@@ -131,7 +131,7 @@ void setupContents() {
 
   square=cp5.addButton("Square")
     .setFont(createFont("Arial Black", 20))
-    .setPosition(x, y=55)
+    .setPosition(x, y=45)
     .setSize(120, 60);
 
   sine=cp5.addButton("Sinusoid")
@@ -141,7 +141,7 @@ void setupContents() {
 
 
   stretchLen=cp5.addTextfield("stretch length (mm)")
-    .setPosition(x=15, y+80)
+    .setPosition(x=15, y+70)
     .setColorValue(color(0, 0, 0))
     .setColorCursor(color(0, 0, 0))
     .setColorLabel(color(0, 0, 0))
@@ -153,7 +153,7 @@ void setupContents() {
 
 
   TimeA=cp5.addTextfield("time A")
-    .setPosition(x, y = 270-50)
+    .setPosition(x, y = 270-70)
     .setColorValue(color(0, 0, 0))
     .setColorCursor(color(0, 0, 0))
     .setColorLabel(color(68, 114, 196))
@@ -197,7 +197,7 @@ void setupContents() {
     .setAutoClear(false);
 
   Hours=cp5.addTextfield("Hour")
-    .setPosition(x=15, y=410-70)
+    .setPosition(x=15, y=410-100)
     .setColorValue(color(0, 0, 0))
     .setColorCursor(color(0, 0, 0))
     .setColorLabel(color(0, 0, 0))
@@ -232,7 +232,7 @@ void setupContents() {
 
 
   loadUser=cp5.addButton("Load User")
-    .setPosition(x=15, y+90-15)
+    .setPosition(x=15, y+75)
     .setFont(createFont("Arial Black", 16))
     .setSize(150, 50);
 
@@ -289,31 +289,31 @@ void setupContents() {
   x=410;
   pause=cp5.addButton("pause")
     .setFont(createFont("Arial Black", 20))
-    .setPosition(x, 420)
+    .setPosition(x, 390)
     .setSize(120, 50);
 
   resume=cp5.addButton("resume")
     .setFont(createFont("Arial Black", 20))
-    .setPosition(x+=130, 420)
+    .setPosition(x+=130, 390)
     .setSize(120, 50);
 
   cancel=cp5.addButton("Cancel")
     .setFont(createFont("Arial Black", 20))
-    .setPosition(x+=130, 420)
+    .setPosition(x+=130, 390)
     .setSize(120, 50)
     .setColorBackground(#FA0000)
     .setColorForeground(#FF7C80);
 
   eStopAux=cp5.addButton("eStopAux")
     .setFont(createFont("Arial Black", 20))
-    .setPosition(150, 375)
-    .setSize(200, 75)
+    .setPosition(400, 340)
+    .setSize(150, 75)
     .setLabel("Aux");
 
   eStopResume=cp5.addButton("eStopResume")
     .setFont(createFont("Arial Black", 20))
-    .setPosition(460, 375)
-    .setSize(200, 75)
+    .setPosition(600, 340)
+    .setSize(150, 75)
     .setLabel("Resume");
   ;
 

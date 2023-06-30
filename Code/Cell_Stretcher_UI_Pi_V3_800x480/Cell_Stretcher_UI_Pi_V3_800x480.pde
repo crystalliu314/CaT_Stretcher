@@ -149,7 +149,7 @@ boolean windowPosFlag;
 void setup() {
   windowPosFlag=false;
   //size (1024, 570);  //window size
-  size (800, 480);  //window size (-224, -98)
+  size (800, 450);  //window size (-224, -98)
   surface.setTitle("CaT Stretcher");
 
   //refer to "setup" tab for contents
